@@ -34,11 +34,13 @@ const formAction = `https://formsubmit.co/${encodeURIComponent(content.email)}`;
         <p class="text-xs uppercase tracking-[0.15em] text-accent/90">{content.linkedinLabel}</p>
         <a href={linkedin} target="_blank" rel="noreferrer" class="mt-2 inline-flex text-white hover:text-accent">{linkedin}</a>
       </div>
-      <div class="rounded-xl border border-accent/25 p-4">
-        <p class="text-xs uppercase tracking-[0.15em] text-accent/90">{content.emailLabel}</p>
-        <p class="mt-2 text-white">{content.email}</p>
-        <p class="mt-1 text-xs text-muted/80">{content.emailNote}</p>
-      </div>
+      {content.showEmail !== false && (
+        <div class="rounded-xl border border-accent/25 p-4">
+          <p class="text-xs uppercase tracking-[0.15em] text-accent/90">{content.emailLabel}</p>
+          <p class="mt-2 text-white">{content.email}</p>
+          <p class="mt-1 text-xs text-muted/80">{content.emailNote}</p>
+        </div>
+      )}
       <div class="rounded-xl border border-accent/25 p-4">
         <p class="text-xs uppercase tracking-[0.15em] text-accent/90">{content.calendlyLabel}</p>
         <a href={content.calendly} target="_blank" rel="noreferrer" class="mt-2 inline-flex text-white hover:text-accent">{content.calendly}</a>

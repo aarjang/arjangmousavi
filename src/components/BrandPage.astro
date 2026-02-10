@@ -218,8 +218,10 @@ const cardLabel = lang === 'fa' ? 'برچسب‌ها' : 'Tags';
     </article>
   </SectionShell>
 
-  <SectionShell id="contact" title={content.contact.heading}>
-    <ContactSection content={content.contact} linkedin={linkedin} />
-  </SectionShell>
+  {content.contact?.enabled !== false && (
+    <SectionShell id="contact" title={content.contact.heading}>
+      <ContactSection content={content.contact} linkedin={linkedin} />
+    </SectionShell>
+  )}
 </main>
 <Footer text={content.footer} />

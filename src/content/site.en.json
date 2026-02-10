@@ -141,6 +141,8 @@
     "note": "Selected brand names available on request."
   },
   "contact": {
+    "enabled": false,
+    "showEmail": false,
     "heading": "Contact",
     "intro": "Open to meaningful product conversations and high-impact collaborations.",
     "linkedinLabel": "LinkedIn",
