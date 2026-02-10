@@ -58,6 +58,11 @@ Edit language copy files:
 - `src/content/site.en.json`
 - `src/content/site.fa.json`
 
+## Profile photo
+
+- Hero photo currently uses: `public/images/arjang-portrait.svg` (luxury placeholder).
+- Replace it with your real portrait and update `src/components/Hero.astro` to point to the new file (recommended: `.webp`).
+
 ## Contact form configuration
 
 The contact form uses FormSubmit (no backend needed) with captcha enabled.

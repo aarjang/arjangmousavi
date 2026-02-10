@@ -1,0 +1,17 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="450" y1="0" x2="450" y2="1100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E3957"/>
+      <stop offset="1" stop-color="#0F1F2F"/>
+    </linearGradient>
+    <radialGradient id="gold" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(700 160) rotate(127) scale(420 520)">
+      <stop stop-color="#CAA45D" stop-opacity="0.36"/>
+      <stop offset="1" stop-color="#CAA45D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="1100" rx="42" fill="url(#bg)"/>
+  <rect width="900" height="1100" rx="42" fill="url(#gold)"/>
+  <circle cx="450" cy="385" r="150" fill="#0D1A28" stroke="#CAA45D" stroke-opacity="0.5"/>
+  <path d="M245 845C245 705 336 610 450 610C564 610 655 705 655 845V915H245V845Z" fill="#0D1A28" stroke="#CAA45D" stroke-opacity="0.44"/>
+  <text x="450" y="990" fill="#CDCDC3" font-size="36" font-family="Inter, sans-serif" text-anchor="middle">Arjang Mousavi</text>
+</svg>
