@@ -14,8 +14,13 @@ html {
 
 body {
   @apply bg-bg text-muted font-body antialiased;
-  background-image: radial-gradient(circle at 10% -10%, rgba(202, 164, 93, 0.18), transparent 22%), radial-gradient(circle at 100% 0%, rgba(9, 96, 103, 0.12), transparent 27%), linear-gradient(180deg, #0f1f2f 0%, #0d1a28 100%);
+  background-image:
+    radial-gradient(circle at 10% -10%, rgba(202, 164, 93, 0.22), transparent 24%),
+    radial-gradient(circle at 100% 0%, rgba(9, 96, 103, 0.14), transparent 29%),
+    radial-gradient(circle at 50% 120%, rgba(202, 164, 93, 0.08), transparent 34%),
+    linear-gradient(180deg, #0f1f2f 0%, #0b1521 100%);
   min-height: 100vh;
+  letter-spacing: 0.01em;
 }
 
 :focus-visible {
@@ -40,13 +45,38 @@ body {
 }
 
 .glass {
-  background: rgba(30, 57, 87, 0.58);
-  border: 1px solid rgba(202, 164, 93, 0.28);
-  backdrop-filter: blur(14px);
+  background: linear-gradient(145deg, rgba(30, 57, 87, 0.64), rgba(14, 29, 44, 0.7));
+  border: 1px solid rgba(202, 164, 93, 0.3);
+  backdrop-filter: blur(16px);
 }
 
 .section-card {
   @apply rounded-2xl glass shadow-premium;
+}
+
+.hero-frame {
+  position: relative;
+  border-radius: 1.8rem;
+  border: 1px solid rgba(202, 164, 93, 0.34);
+  background:
+    linear-gradient(125deg, rgba(202, 164, 93, 0.16), rgba(30, 57, 87, 0.22) 45%, rgba(10, 20, 30, 0.42)),
+    radial-gradient(circle at 80% -30%, rgba(202, 164, 93, 0.35), transparent 36%);
+  overflow: hidden;
+}
+
+.hero-frame::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 1.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+}
+
+.luxury-pill {
+  border-radius: 9999px;
+  border: 1px solid rgba(202, 164, 93, 0.4);
+  background: linear-gradient(180deg, rgba(15, 31, 47, 0.55), rgba(15, 31, 47, 0.9));
 }
 
 .reveal {

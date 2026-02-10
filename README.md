@@ -60,11 +60,13 @@ Edit language copy files:
 
 ## Contact form configuration
 
-The contact form is prepared for Formspree:
+The contact form uses FormSubmit (no backend needed) with captcha enabled.
 
-- Current action: `https://formspree.io/f/REPLACE_WITH_FORM_ID`
-- Replace `REPLACE_WITH_FORM_ID` with your real Formspree form id.
-- If not configured, the site automatically falls back to `mailto:`.
+- Form action is generated from `contact.email` in:
+  - `src/content/site.en.json`
+  - `src/content/site.fa.json`
+- Set your Gmail (or preferred inbox email) there, for example: `yourname@gmail.com`
+- On first submission, FormSubmit sends a verification email; confirm once to activate delivery.
 
 ## SEO assets
 

@@ -13,6 +13,7 @@ interface Props {
     copyEmail: string;
     copiedLabel: string;
     formTitle: string;
+    formNote: string;
     formName: string;
     formEmail: string;
     formMessage: string;
@@ -22,6 +23,7 @@ interface Props {
 }
 
 const { content, linkedin } = Astro.props;
+const formAction = `https://formsubmit.co/${encodeURIComponent(content.email)}`;
 ---
 
 <div class="grid gap-6 lg:grid-cols-2">
@@ -50,13 +52,18 @@ const { content, linkedin } = Astro.props;
 
   <article class="section-card reveal p-6">
     <h3 class="mb-4 font-heading text-2xl text-white">{content.formTitle}</h3>
+    <p class="mb-4 text-sm text-muted/85">{content.formNote}</p>
     <form
       id="contact-form"
       class="space-y-4"
       method="POST"
-      action="https://formspree.io/f/REPLACE_WITH_FORM_ID"
-      data-mailto={content.email}
+      action={formAction}
     >
+      <input type="hidden" name="_subject" value="New website contact request" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+
       <label class="block text-sm text-muted" for="name">{content.formName}</label>
       <input id="name" name="name" required class="w-full rounded-xl border border-accent/30 bg-bg/40 px-4 py-2 text-white placeholder:text-muted/60" />
 

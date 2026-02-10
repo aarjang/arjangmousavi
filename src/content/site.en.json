@@ -24,9 +24,9 @@
     "primaryCta": "Contact",
     "secondaryCta": "View Work",
     "stats": [
-      "17+ years",
-      "100+ apps shipped",
-      "AI product focus"
+      "AI Product Leadership",
+      "Global Product Delivery",
+      "Premium Product Craft"
     ]
   },
   "about": {
@@ -35,7 +35,7 @@
       "With 17+ years in software, I have led products from concept to production for global markets.",
       "My focus spans AI products, technical platforms, e-commerce, and fintech where speed and quality must coexist.",
       "I bring a hands-on development background, which keeps strategy grounded in practical delivery realities.",
-      "I have worked across large international environments and leading Iranian companies including Digikala and Tapsi.",
+      "I have worked across large international environments and leading Iranian companies including Digikala, Tapsi, Irancell, and Ertebat Farda (Bank Ayandeh).",
       "Today I help teams design clear product bets, execute with discipline, and launch with confidence."
     ],
     "highlights": [
@@ -137,7 +137,7 @@
     "whoTitle": "Who I work with",
     "industries": ["Ride-hailing", "E-commerce", "Fintech", "Cloud Platforms", "AI"],
     "who": ["Founders", "Product orgs", "Platform teams", "AI teams"],
-    "brands": ["Tapsi", "Digikala"],
+    "brands": ["Tapsi", "Digikala", "Irancell", "Ertebat Farda (Bank Ayandeh)"],
     "note": "Selected brand names available on request."
   },
   "contact": {
@@ -145,14 +145,15 @@
     "intro": "Open to meaningful product conversations and high-impact collaborations.",
     "linkedinLabel": "LinkedIn",
     "emailLabel": "Email (optional)",
-    "email": "hello@yourdomain.com",
-    "emailNote": "Replace with your preferred email.",
+    "email": "yourname@gmail.com",
+    "emailNote": "Replace with your real Gmail to receive form submissions.",
     "calendlyLabel": "Calendly (optional)",
     "calendly": "https://calendly.com/your-handle",
     "copyLink": "Copy profile link",
     "copyEmail": "Copy email",
     "copiedLabel": "Copied",
     "formTitle": "Send a quick message",
+    "formNote": "Protected by captcha. Messages are delivered to your Gmail via FormSubmit.",
     "formName": "Name",
     "formEmail": "Email",
     "formMessage": "Message",
