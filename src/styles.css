@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg text-muted font-body antialiased;
+  background-image: radial-gradient(circle at 10% -10%, rgba(202, 164, 93, 0.18), transparent 22%), radial-gradient(circle at 100% 0%, rgba(9, 96, 103, 0.12), transparent 27%), linear-gradient(180deg, #0f1f2f 0%, #0d1a28 100%);
+  min-height: 100vh;
+}
+
+:focus-visible {
+  outline: 2px solid #CAA45D;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 80;
+  background: #CAA45D;
+  color: #0F1F2F;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.glass {
+  background: rgba(30, 57, 87, 0.58);
+  border: 1px solid rgba(202, 164, 93, 0.28);
+  backdrop-filter: blur(14px);
+}
+
+.section-card {
+  @apply rounded-2xl glass shadow-premium;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 650ms ease, transform 650ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

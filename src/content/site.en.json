@@ -1,0 +1,168 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "meta": {
+    "title": "Arjang Mousavi | Product Lead, Consultant, Product Creator",
+    "description": "Arjang Mousavi builds AI-first products with precision. 17+ years in software across AI, fintech, e-commerce, and technical platforms.",
+    "ogTitle": "Arjang Mousavi — AI-first products, shipped with taste.",
+    "ogDescription": "Product Lead, Product Consultant, and Product Creator helping teams ship high-quality AI-first products globally."
+  },
+  "name": "Arjang Mousavi",
+  "nativeName": "ارژنگ موسوی",
+  "title": "Product Lead • Product Consultant • Product Creator",
+  "tagline": "AI-first products, shipped with taste.",
+  "location": "Everywhere (Remote / Global)",
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "work": "Work",
+    "experience": "Experience",
+    "collaborations": "Collaborations",
+    "contact": "Contact"
+  },
+  "hero": {
+    "primaryCta": "Contact",
+    "secondaryCta": "View Work",
+    "stats": [
+      "17+ years",
+      "100+ apps shipped",
+      "AI product focus"
+    ]
+  },
+  "about": {
+    "heading": "About",
+    "bio": [
+      "With 17+ years in software, I have led products from concept to production for global markets.",
+      "My focus spans AI products, technical platforms, e-commerce, and fintech where speed and quality must coexist.",
+      "I bring a hands-on development background, which keeps strategy grounded in practical delivery realities.",
+      "I have worked across large international environments and leading Iranian companies including Digikala and Tapsi.",
+      "Today I help teams design clear product bets, execute with discipline, and launch with confidence."
+    ],
+    "highlights": [
+      {
+        "title": "AI-first strategy",
+        "body": "Define product positioning, roadmap priorities, and decision systems around measurable AI leverage."
+      },
+      {
+        "title": "Idea to delivery",
+        "body": "Turn ambitious ideas into shipped products by aligning discovery, team formation, and execution cadence."
+      },
+      {
+        "title": "Systems thinking",
+        "body": "Build production-ready products with durable architecture, operational rigor, and clear ownership."
+      }
+    ]
+  },
+  "services": {
+    "heading": "Services",
+    "items": [
+      "AI-first product strategy and premium positioning",
+      "Zero-to-one product creation: discovery to MVP to launch",
+      "Building and leading technical product teams for delivery",
+      "Product audits with turnaround plans and execution reset",
+      "AI roadmap design and experimentation operating system",
+      "Go-to-market alignment across product, growth, and operations"
+    ]
+  },
+  "work": {
+    "heading": "Work",
+    "ctaLabel": "View",
+    "privateLabel": "Private",
+    "items": [
+      {
+        "title": "Australian Multi-Product Portfolio",
+        "summary": "Product leadership across a broad suite of software products tailored for the Australian market.",
+        "impact": "Impact: 100+ apps launched with structured product delivery practices.",
+        "tags": ["Product Leadership", "Mobile", "Platform"],
+        "link": "private"
+      },
+      {
+        "title": "DigiCloud Launch",
+        "summary": "Led product direction and cross-functional execution for DigiCloud in Iran.",
+        "impact": "Impact: shipped a cloud-focused product initiative in a technical market context.",
+        "tags": ["Cloud", "Platform", "B2B"],
+        "link": "private"
+      },
+      {
+        "title": "Hamrah Card Mobile App",
+        "summary": "Supported mobile product delivery for Hamrah Card with user-centric prioritization.",
+        "impact": "Impact: launched and iterated a fintech-oriented mobile experience.",
+        "tags": ["Fintech", "Mobile", "Consumer"],
+        "link": "private"
+      },
+      {
+        "title": "Product Lead at Tapsi",
+        "summary": "Drove product leadership in infrastructure-heavy, technology-intensive product areas.",
+        "impact": "Impact: scaled product operations in a high-demand ride-hailing ecosystem.",
+        "tags": ["Ride-hailing", "Infrastructure", "Scale"],
+        "link": "private"
+      },
+      {
+        "title": "AI Product Consulting",
+        "summary": "Consulted on dozens of product initiatives with AI strategy and execution guidance.",
+        "impact": "Impact: accelerated launch readiness across multiple AI-focused product tracks.",
+        "tags": ["AI", "Consulting", "Strategy"],
+        "link": "private"
+      }
+    ]
+  },
+  "experience": {
+    "heading": "Experience",
+    "items": [
+      {
+        "title": "17+ years in software",
+        "body": "Built and shipped software products across global and regional markets."
+      },
+      {
+        "title": "Product Lead",
+        "body": "Led multi-disciplinary teams through strategy, delivery, and operational scaling."
+      },
+      {
+        "title": "Product Consultant",
+        "body": "Partnered with founders and product organizations on roadmap clarity and turnaround plans."
+      },
+      {
+        "title": "Product Creator",
+        "body": "Developed zero-to-one products with a strong focus on quality, speed, and usability."
+      },
+      {
+        "title": "Development background",
+        "body": "Hands-on engineering foundation enables practical decisions under real production constraints."
+      }
+    ]
+  },
+  "collaborations": {
+    "heading": "Collaborations",
+    "industriesTitle": "Industries",
+    "whoTitle": "Who I work with",
+    "industries": ["Ride-hailing", "E-commerce", "Fintech", "Cloud Platforms", "AI"],
+    "who": ["Founders", "Product orgs", "Platform teams", "AI teams"],
+    "brands": ["Tapsi", "Digikala"],
+    "note": "Selected brand names available on request."
+  },
+  "contact": {
+    "heading": "Contact",
+    "intro": "Open to meaningful product conversations and high-impact collaborations.",
+    "linkedinLabel": "LinkedIn",
+    "emailLabel": "Email (optional)",
+    "email": "hello@yourdomain.com",
+    "emailNote": "Replace with your preferred email.",
+    "calendlyLabel": "Calendly (optional)",
+    "calendly": "https://calendly.com/your-handle",
+    "copyLink": "Copy profile link",
+    "copyEmail": "Copy email",
+    "copiedLabel": "Copied",
+    "formTitle": "Send a quick message",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formMessage": "Message",
+    "formSubmit": "Send"
+  },
+  "footer": "© Arjang Mousavi. All rights reserved.",
+  "switch": {
+    "label": "FA",
+    "href": "/fa/",
+    "aria": "Switch to Persian"
+  },
+  "skipToContent": "Skip to content"
+}

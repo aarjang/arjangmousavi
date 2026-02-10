@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BrandPage from '../../components/BrandPage.astro';
+import content from '../../content/site.fa.json';
+---
+
+<BaseLayout
+  lang="fa"
+  dir="rtl"
+  title={content.meta.title}
+  description={content.meta.description}
+  ogTitle={content.meta.ogTitle}
+  ogDescription={content.meta.ogDescription}
+  skipToContent={content.skipToContent}
+>
+  <div class="font-fa">
+    <BrandPage content={content} lang="fa" />
+  </div>
+</BaseLayout>

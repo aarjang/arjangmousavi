@@ -1,0 +1,224 @@
+---
+import Navbar from './Navbar.astro';
+import Hero from './Hero.astro';
+import SectionShell from './SectionShell.astro';
+import ContactSection from './ContactSection.astro';
+import Footer from './Footer.astro';
+
+interface PortfolioItem {
+  title: string;
+  summary: string;
+  impact: string;
+  tags: string[];
+  link: string;
+}
+
+interface ExperienceItem {
+  title: string;
+  body: string;
+}
+
+interface Highlight {
+  title: string;
+  body: string;
+}
+
+interface SiteContent {
+  name: string;
+  title: string;
+  tagline: string;
+  location: string;
+  nav: {
+    about: string;
+    services: string;
+    work: string;
+    experience: string;
+    collaborations: string;
+    contact: string;
+  };
+  hero: {
+    primaryCta: string;
+    secondaryCta: string;
+    stats: string[];
+  };
+  about: {
+    heading: string;
+    bio: string[];
+    highlights: Highlight[];
+  };
+  services: {
+    heading: string;
+    items: string[];
+  };
+  work: {
+    heading: string;
+    ctaLabel: string;
+    privateLabel: string;
+    items: PortfolioItem[];
+  };
+  experience: {
+    heading: string;
+    items: ExperienceItem[];
+  };
+  collaborations: {
+    heading: string;
+    industriesTitle: string;
+    whoTitle: string;
+    industries: string[];
+    who: string[];
+    brands: string[];
+    note: string;
+  };
+  contact: {
+    heading: string;
+    intro: string;
+    linkedinLabel: string;
+    emailLabel: string;
+    email: string;
+    emailNote: string;
+    calendlyLabel: string;
+    calendly: string;
+    copyLink: string;
+    copyEmail: string;
+    copiedLabel: string;
+    formTitle: string;
+    formName: string;
+    formEmail: string;
+    formMessage: string;
+    formSubmit: string;
+  };
+  footer: string;
+  switch: {
+    label: string;
+    href: string;
+    aria: string;
+  };
+}
+
+interface Props {
+  content: SiteContent;
+  lang: 'en' | 'fa';
+}
+
+const { content, lang } = Astro.props;
+const linkedin = 'https://www.linkedin.com/in/arjang-mousavi/';
+const cardLabel = lang === 'fa' ? 'برچسب‌ها' : 'Tags';
+---
+
+<Navbar name={content.name} nav={content.nav} switcher={content.switch} />
+<main id="main-content">
+  <Hero
+    name={content.name}
+    title={content.title}
+    tagline={content.tagline}
+    location={content.location}
+    ctaPrimary={content.hero.primaryCta}
+    ctaSecondary={content.hero.secondaryCta}
+    stats={content.hero.stats}
+  />
+
+  <SectionShell id="about" title={content.about.heading}>
+    <div class="grid gap-6 lg:grid-cols-[1.35fr,1fr]">
+      <article class="section-card reveal p-6 leading-8">
+        {content.about.bio.map((line) => (
+          <p class="mb-3 last:mb-0">{line}</p>
+        ))}
+      </article>
+      <div class="grid gap-4">
+        {content.about.highlights.map((item) => (
+          <article class="section-card reveal p-5">
+            <h3 class="font-heading text-2xl text-white">{item.title}</h3>
+            <p class="mt-2 text-muted/90">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </SectionShell>
+
+  <SectionShell id="services" title={content.services.heading}>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {content.services.items.map((item) => (
+        <article class="section-card reveal p-5">
+          <p class="text-sm leading-7 text-white/95">{item}</p>
+        </article>
+      ))}
+    </div>
+  </SectionShell>
+
+  <SectionShell id="work" title={content.work.heading}>
+    <div class="grid gap-4 lg:grid-cols-2">
+      {content.work.items.map((item) => (
+        <article class="section-card reveal p-5">
+          <h3 class="font-heading text-2xl text-white">{item.title}</h3>
+          <p class="mt-2 text-muted/90">{item.summary}</p>
+          <p class="mt-3 text-sm text-accent">{item.impact}</p>
+          <p class="mt-3 text-xs uppercase tracking-[0.14em] text-muted/80">{cardLabel}</p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            {item.tags.map((tag) => (
+              <span class="rounded-full border border-accent/30 px-3 py-1 text-xs text-white/90">{tag}</span>
+            ))}
+          </div>
+          <a
+            href={item.link === 'private' ? '#' : item.link}
+            target={item.link === 'private' ? '_self' : '_blank'}
+            rel="noreferrer"
+            class="mt-5 inline-flex rounded-full border border-accent/50 px-4 py-2 text-xs font-semibold text-accent hover:bg-accent hover:text-bg transition-colors"
+            aria-disabled={item.link === 'private'}
+          >
+            {item.link === 'private' ? content.work.privateLabel : content.work.ctaLabel}
+          </a>
+        </article>
+      ))}
+    </div>
+  </SectionShell>
+
+  <SectionShell id="experience" title={content.experience.heading}>
+    <ol class="relative border-s border-accent/35 ps-6">
+      {content.experience.items.map((item) => (
+        <li class="reveal mb-6">
+          <span class="absolute -start-[0.44rem] mt-2 h-3.5 w-3.5 rounded-full bg-accent"></span>
+          <article class="section-card p-5">
+            <h3 class="font-heading text-2xl text-white">{item.title}</h3>
+            <p class="mt-2 text-muted/90">{item.body}</p>
+          </article>
+        </li>
+      ))}
+    </ol>
+  </SectionShell>
+
+  <SectionShell id="collaborations" title={content.collaborations.heading}>
+    <div class="grid gap-6 lg:grid-cols-2">
+      <article class="section-card reveal p-6">
+        <h3 class="font-heading text-2xl text-white">{content.collaborations.industriesTitle}</h3>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {content.collaborations.industries.map((item) => (
+            <span class="rounded-full bg-surface/60 px-4 py-2 text-sm text-white">{item}</span>
+          ))}
+        </div>
+      </article>
+
+      <article class="section-card reveal p-6">
+        <h3 class="font-heading text-2xl text-white">{content.collaborations.whoTitle}</h3>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {content.collaborations.who.map((item) => (
+            <span class="rounded-full bg-surface/60 px-4 py-2 text-sm text-white">{item}</span>
+          ))}
+        </div>
+      </article>
+    </div>
+
+    <article class="section-card reveal mt-6 p-6">
+      <div class="flex flex-wrap gap-2">
+        {content.collaborations.brands.map((brand) => (
+          <span class="rounded-full border border-accent/35 px-4 py-2 text-sm text-accent">{brand}</span>
+        ))}
+      </div>
+      <p class="mt-4 text-sm text-muted/85">{content.collaborations.note}</p>
+    </article>
+  </SectionShell>
+
+  <SectionShell id="contact" title={content.contact.heading}>
+    <ContactSection content={content.contact} linkedin={linkedin} />
+  </SectionShell>
+</main>
+<Footer text={content.footer} />

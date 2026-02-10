@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BrandPage from '../components/BrandPage.astro';
+import content from '../content/site.en.json';
+---
+
+<BaseLayout
+  lang="en"
+  dir="ltr"
+  title={content.meta.title}
+  description={content.meta.description}
+  ogTitle={content.meta.ogTitle}
+  ogDescription={content.meta.ogDescription}
+  skipToContent={content.skipToContent}
+>
+  <BrandPage content={content} lang="en" />
+</BaseLayout>

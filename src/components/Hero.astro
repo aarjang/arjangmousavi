@@ -1,0 +1,31 @@
+---
+interface Props {
+  name: string;
+  title: string;
+  tagline: string;
+  location: string;
+  ctaPrimary: string;
+  ctaSecondary: string;
+  stats: string[];
+}
+
+const { name, title, tagline, location, ctaPrimary, ctaSecondary, stats } = Astro.props;
+---
+
+<section id="top" class="mx-auto max-w-6xl px-6 pb-20 pt-16 lg:px-8 lg:pt-24">
+  <div class="reveal rounded-3xl border border-accent/22 bg-gold-sheen px-8 py-14 shadow-premium lg:px-12">
+    <p class="mb-3 text-sm tracking-[0.2em] text-accent uppercase">{location}</p>
+    <h1 class="font-heading text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">{name}</h1>
+    <p class="mt-4 text-lg text-muted sm:text-xl">{title}</p>
+    <p class="mt-4 max-w-2xl text-xl font-medium text-accent">{tagline}</p>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href="#contact" class="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-bg transition hover:bg-accentStrong">{ctaPrimary}</a>
+      <a href="#work" class="rounded-full border border-accent/50 px-6 py-3 text-sm font-semibold text-accent transition hover:bg-accent/10">{ctaSecondary}</a>
+    </div>
+    <div class="mt-10 grid gap-4 sm:grid-cols-3">
+      {stats.map((stat) => (
+        <div class="section-card p-4 text-sm text-white/90">{stat}</div>
+      ))}
+    </div>
+  </div>
+</section>

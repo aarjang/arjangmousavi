@@ -1,0 +1,48 @@
+---
+interface Props {
+  name: string;
+  nav: {
+    about: string;
+    services: string;
+    work: string;
+    experience: string;
+    collaborations: string;
+    contact: string;
+  };
+  switcher: {
+    label: string;
+    href: string;
+    aria: string;
+  };
+}
+
+const { name, nav, switcher } = Astro.props;
+const base = import.meta.env.BASE_URL || '/';
+const navLinks = [
+  { id: 'about', label: nav.about },
+  { id: 'services', label: nav.services },
+  { id: 'work', label: nav.work },
+  { id: 'experience', label: nav.experience },
+  { id: 'collaborations', label: nav.collaborations },
+  { id: 'contact', label: nav.contact }
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-accent/20 bg-bg/85 backdrop-blur">
+  <nav class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-4 lg:px-8" aria-label="Main navigation">
+    <a href="#top" class="font-heading text-lg text-accent hover:text-accentStrong transition-colors">{name}</a>
+    <div class="flex max-w-full items-center gap-4 overflow-x-auto">
+      {navLinks.map((link) => (
+        <a href={`#${link.id}`} class="text-sm text-muted hover:text-accent transition-colors">{link.label}</a>
+      ))}
+      <a
+        href={`${base}${switcher.href.replace(/^\//, '')}`}
+        lang={switcher.label === 'FA' ? 'fa' : 'en'}
+        class="rounded-full border border-accent/45 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent hover:bg-accent hover:text-bg transition-colors"
+        aria-label={switcher.aria}
+      >
+        {switcher.label}
+      </a>
+    </div>
+  </nav>
+</header>
