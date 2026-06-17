@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#0F0F0F"/>
+  <g fill="#C8A96A" transform="translate(4,10) scale(0.333,0.4)">
+    <polygon points="44,16 49,16 30,96 16,96"/>
+    <polygon points="44,16 52,16 78,96 60,96"/>
+    <polygon points="33,68 67,68 69,74 31,74"/>
+    <rect x="10" y="96" width="26" height="5"/>
+    <rect x="54" y="96" width="30" height="5"/>
+    <polygon points="40,13 53,13 52,18 41,18"/>
+    <polygon points="84,16 90,16 90,96 84,96"/>
+    <polygon points="90,18 99,18 119,78 110,82"/>
+    <polygon points="119,78 128,82 148,18 139,18"/>
+    <polygon points="148,16 154,16 154,96 148,96"/>
+    <rect x="80" y="96" width="18" height="5"/>
+    <rect x="142" y="96" width="18" height="5"/>
+    <rect x="80" y="13" width="16" height="5"/>
+    <rect x="142" y="13" width="16" height="5"/>
+  </g>
+</svg>
