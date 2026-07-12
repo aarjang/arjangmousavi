@@ -1,4 +1,19 @@
-node_modules
-dist
-.astro
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.astro/
+
+# macOS
 .DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Misc
+uploads/
